@@ -6,27 +6,19 @@
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
-    "plugin:prettier/recommended",
-    "react-app",
-    "react-app/jest",
-    "prettier"
+    "plugin:prettier/recommended"
   ],
   "plugins": ["react", "prettier"],
   "overrides": [],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "ecmaVersion": "latest",
+    "ecmaVersion": 12,
     "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true
     }
   },
   "rules": {
-    "quotes": [
-      "error",
-      "single",
-      { "avoidEscape": true, "allowTemplateLiterals": true }
-    ],
     "prettier/prettier": [
       "error",
       {
@@ -34,7 +26,7 @@
       }
     ],
     "react/jsx-uses-react": "off",
-    "react/react-in-jsx-scope": 0,
+    "react/react-in-jsx-scope": "off",
     "react/prop-types": "off"
   },
   "ignorePatterns": ["*.config.js"]

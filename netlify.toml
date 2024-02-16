@@ -4,4 +4,12 @@
   from = "/*"
   to = "/index.html"
   status = 200
-  
+
+[build]
+  environment = {  REACT_APP_KAKAO_API_KEY='bcab9a7d7bd8fdd7a93f0c3f30d70cb1' }
+  command = "npm run build"
+  publish = "build"
+
+[context.production.environment]
+  TOML_ENV_VAR = "From netlify.toml"
+  REACT_APP_TOML_ENV_VAR = "From netlify.toml (REACT_APP_)"
